@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webseite mit Index-Dokument</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Website</h1>
+    </header>
+<main>
+    <section id="home">
+        <h2>Home</h2>
+        <p>Dies ist eine Startseite</p>
+    </section>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p>Hier finden Sie mein Portfolio.</p>
+    </section>
+    <section id="about">
+        <h2>About</h2>
+        <p>Hier erfahren sie mehr über mich.</p>
+    </section>
+    <section id="kontakt">
+        <h2>Kontakt</h2>
+        <form action="mailto:ihre-email-adresse@email.de" method="post">
+            <label for="email">E-Mail-Adresse:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="betreff">Betreff:</label><br>
+            <input type="text" id="betreff" name="betreff" value="Webseite-Anfrage"><br>
+            <label for="nachricht">Nachricht:</label><br>
+            <textarea id="nachricht" name="nachricht" required></textarea><br>
+            <button type="submit">Senden</button><br>
+        </form>
+    </section>
+</main>
+<footer>
+    <p>&copy; 2024 - STM</p>
+</footer>
+<script>
+    const emailInput = document.getElementById("email");
+    const nachrichtInput = document.getElementById("nachricht");
+    const form = document.getElementById("kontakt");
+
+    form.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        if (!emailInput.value || !nachrichtInput.value) {
+            alert("Bitte geben Sie Ihre E-Mail-Adresse und eine Nachricht ein.");
+            return;
+        }
+
+        emailInput.value = "";
+        nachrichtInput.value = "";
+
+        const data = {
+            email: emailInput.value,
+            nachricht: nachrichtInput.value,
+        };
+
+        localStorage.setItem("data", JSON.stringify(data));
+    });
+</script>
+</body>
+</html>

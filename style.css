@@ -1,0 +1,79 @@
+/* Allgemeine Styles */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: #333;
+}
+
+/* Header */
+
+header {
+    background-color: #ddd;
+    padding: 10px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+/* Main */
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Footer */
+
+footer {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Kontaktformular */
+
+#kontakt form {
+    margin: 0 auto;
+    width: 500px;
+}
+
+#kontakt input, #kontakt textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+#kontakt button {
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+#kontakt button:hover {
+    background-color: #333;
+}
